@@ -16,7 +16,7 @@ int (*get_op_func(char *s))(int a, int b)
 		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
-		{NULL, NULL}
+		{NULL, NULL},
 	};
 	int i = 0;
 
