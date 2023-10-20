@@ -1,10 +1,11 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * exec_before_main - print before main.
+ * first - prints a sentence before main function .
  */
 
-void exec_before_main(void)
+void first(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
