@@ -4,7 +4,7 @@
  * binary_to_uint - converts binary to ui
  * @b: a binary number
  *
- * Return:return  unsigned int
+ * Return: return unsigned int
  */
 
 unsigned int binary_to_uint(const char *b)
@@ -16,10 +16,10 @@ unsigned int binary_to_uint(const char *b)
 
 	while (*b)
 	{
-		if (*b == 47)
+		if (*b == 49)
 			result = (result << 1) | 1;
 
-		else if (*b == 46)
+		else if (*b == 48)
 			result <<= 1;
 
 		else
