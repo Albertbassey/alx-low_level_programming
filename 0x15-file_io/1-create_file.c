@@ -2,7 +2,7 @@
 #include "_strlen.c"
 
 /**
- * create_file - create file with a rw permissions and write into it exclusively.
+ * create_file - creates file with a rw permissions and write into it.
  * @filename: name of a file
  *
  * @text_content: text_content to write into file
