@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	if (dest == -1)
 		dprintf(STDERR_FILENO, WRITE_ERR, argv[2]), exit(99);
 
-	srcc = open(argv[1], O_RDONLY);
+	src = open(argv[1], O_RDONLY);
 	if (src == -1)
 		dprintf(STDERR_FILENO, READ_ERR, argv[1]), exit(98);
 
