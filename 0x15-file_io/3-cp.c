@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int srcc, dest, on_close, n_write, n_read;
+	int src, dest, on_close, n_write, n_read;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -21,12 +21,12 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, WRITE_ERR, argv[2]), exit(99);
 
 	srcc = open(argv[1], O_RDONLY);
-	if (srcc == -1)
+	if (src == -1)
 		dprintf(STDERR_FILENO, READ_ERR, argv[1]), exit(98);
 
 	while (1)
 	{
-		n_read = read(srcc, buffer, 1024);
+		n_read = read(src, buffer, 1024);
 		if (n_read == -1)
 			dprintf(STDERR_FILENO, READ_ERR, argv[1]), exit(98);
 
@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
 		} else
 			break;
 	}
-	on_close = close(srcc);
+	on_close = close(src);
 	if (on_close == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close ff %d\n", srcc), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close ff %d\n", src), exit(100);
 
 	on_close = close(dest);
 	if (on_close == -1)
